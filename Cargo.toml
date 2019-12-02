@@ -1,0 +1,9 @@
+[package]
+name = "advent_of_code_2019"
+version = "0.1.0"
+authors = ["Chris Lane <chris@chrislane.com>"]
+repository = "https://github.com/ChrisLane/advent-of-code-2019"
+edition = "2018"
+
+[dependencies]
+clap = "2.33.0"
