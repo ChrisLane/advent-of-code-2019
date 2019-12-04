@@ -7,6 +7,7 @@ use std::fs::File;
 use clap::{App, Arg};
 
 mod day_01;
+mod day_02;
 
 fn main() -> std::io::Result<()> {
     let possible_days: Vec<String> = (1..24).map(|x| x.to_string()).collect();
@@ -58,8 +59,9 @@ fn solve(day: u8, part: u8, input: String) -> Option<String> {
 }
 
 fn get_solver(day: u8, part: u8) -> Option<fn(&str) -> String> {
-    let parts = match day {
+    let parts: (fn(&str) -> String, fn(&str) -> String) = match day {
         1 => (day_01::part1, day_01::part2),
+        2 => (day_02::part1, day_02::part2),
         _ => return None
     };
 
